@@ -36,11 +36,8 @@ def afk(update: Update, context: CallbackContext):
 
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
-    afksend = update.effective_message.reply_text("Babay {}, Manusia gabut".format(fname, notice)
-        )
-    sleep(10)
     try:
-        afksend.delete()
+        update.effective_message.reply_text("Babay {}, Manusia Gabut".format(fname, notice))
     except BadRequest:
         pass
 
@@ -60,7 +57,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-               "{} siapa suruh balik lagi ? ",
+                "{} siapa suruh balik lagi ? ",
                 "{} alias si sok sibuk udah balik nih guys!",
                 "{} online lagi, pasti habis diputusin pacarnya!",
                 "{} mending mati nanggung off doang",
@@ -74,13 +71,9 @@ def no_longer_afk(update: Update, context: CallbackContext):
                 "lah {} kok balik lagi? gajadi mati?",
                 " Bolak balik mulu huh {}",
                 "Dimanakah {}?\nDia disini!",
-           
             ]
             chosen_option = random.choice(options)
-            unafk = update.effective_message.reply_text(chosen_option.format(firstname)
-            )
-            sleep(10)
-            unafk.delete()
+            update.effective_message.reply_text(chosen_option.format(firstname))
         except:
             return
 
@@ -153,7 +146,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} Lagi Sibuk Asu.\nAlasan: <code>{}</code>".format(
+            res = "{} Lagi Sibuk Brow.\nAlasan: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
             )
             update.effective_message.reply_text(res, parse_mode="html")
