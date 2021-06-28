@@ -155,7 +155,8 @@ def check_afk(update, context, user_id, fst_name, userc_id):
                 return
             res = "{} Lagi Sibuk Brow.\nAlasan: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
-            replafk = update.effective_message.reply_text(res, parse_mode="html")
+            replafk = update.effective_message.reply_text(
+                res, parse_mode="html"
             )
             sleep(10)
         try:
