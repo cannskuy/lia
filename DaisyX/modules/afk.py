@@ -36,9 +36,8 @@ def afk(update: Update, context: CallbackContext):
 
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
-    try:
-    afksend = update.effective_message.reply_text("Babay {}, Manusia gabut".format(fname, notice))
-          
+    afksend = update.effective_message.reply_text("Babay {}, Manusia gabut".format(fname, notice)
+        )
     sleep(10)
     try:
         afksend.delete()
