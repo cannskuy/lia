@@ -149,18 +149,18 @@ def check_afk(update, context, user_id, fst_name, userc_id):
             if int(userc_id) == int(user_id):
                 return
             res = "{} Lagi Sibuk Brow, Jangan Ganggu Dulu Syg.".format(fst_name)
-            replafk = update.effective_message.reply_text(res)
+            update.effective_message.reply_text(res)
         else:
             if int(userc_id) == int(user_id):
                 return
             res = "{} Lagi Sibuk Brow.\nAlasan: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
-            replafk = update.effective_message.reply_text(
+            update.effective_message.reply_text(
                 res, parse_mode="html"
             )
             sleep(10)
         try:
-            replafk.delete()
+            reply_text.delete()
         except BadRequest:
             return
 
