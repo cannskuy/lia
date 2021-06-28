@@ -37,7 +37,7 @@ def afk(update: Update, context: CallbackContext):
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("Babay {}, Gausa Balik Ya Kontol !{}".format(fname, notice))
+        update.effective_message.reply_text("Babay {}, Manusia gabut".format(fname, notice))
     except BadRequest:
         pass
 
@@ -57,14 +57,20 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "Si {} Kontol Disini Anjeng!",
-                "{} Balek Lagi Dia Asu!",
-                "{} Kontol Abis Ngejamet Nih Asu!",
-                "{} Pantek Gausa Balek Bodoh!",
-                "Gausa Balek Lu {} Pantek!",
-                "{} Sudah Selesai Bucin Anjeng Huwekkk!",
-                "Selamat Datang Di Indomaret {} Memek",
-                "Abis Darimana Lu {}?\nPasti Dari Anon Cari Pap Meki!",
+               "{} siapa suruh balik lagi ? ",
+                "{} alias si sok sibuk udah balik nih guys!",
+                "{} online lagi, pasti habis diputusin pacarnya!",
+                "{} mending mati nanggung off doang",
+                "Heh {}, ngapain balik kesini?!",
+                "{} percuma balik lagi ga ada yang nyari loe",
+                "{} gila ya ?",
+                "{} kenapa kamu menyebalkan ?",
+                "{} ga ada yang peduli lu off",
+                "{} seleb halu telah kembali",
+                " liat, {} si caper balik lagi",
+                "lah {} kok balik lagi? gajadi mati?",
+                " Bolak balik mulu huh {}",
+                "Dimanakah {}?\nDia disini!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
