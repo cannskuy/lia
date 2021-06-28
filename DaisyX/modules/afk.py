@@ -161,8 +161,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
             sleep(10)
         try:
             reply_text.delete()
-        except BadRequest:
-            return
+      
 
 
 __help__ = """
