@@ -149,7 +149,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
             if int(userc_id) == int(user_id):
                 return
             res = "{} Lagi Sibuk Brow, Jangan Ganggu Dulu Syg.".format(fst_name)
-            update.effective_message.reply_text(res)
+            replafk = update.effective_message.reply_text(res)
         else:
             if int(userc_id) == int(user_id):
                 return
