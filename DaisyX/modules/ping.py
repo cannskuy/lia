@@ -74,13 +74,13 @@ def ping(update: Update, context: CallbackContext):
     msg = update.effective_message
 
     start_time = time.time()
-    message = msg.reply_text("Sabar Kontol...")
+    message = msg.reply_text("Sabar Brads...")
     end_time = time.time()
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     uptime = get_readable_time((time.time() - StartTime))
 
     message.edit_text(
-        "MENGONTOLLL!!!\n"
+        "KEKUATAN BUMI !!\n"
         "<b>Time Taken:</b> <code>{}</code>\n"
         "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
@@ -98,7 +98,7 @@ def ding(update: Update, context: CallbackContext):
     uptime = get_readable_time((time.time() - StartTime))
 
     messageX.edit_text(
-        "! !NGENTOTTT! !\n"
+        "CHECK KEJAHATAN !!\n"
         "<b>Time Taken:</b> <code>{}</code>\n"
         "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
