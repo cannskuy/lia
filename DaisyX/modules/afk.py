@@ -1,5 +1,6 @@
 import html
 import random
+from time import sleep
 
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
@@ -36,11 +37,13 @@ def afk(update: Update, context: CallbackContext):
 
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
+    afksend = update.effective_message.reply_text("babay {}, manusia gabut".format(fname, notice)
+        )
+    sleep(10)
     try:
-        update.effective_message.reply_text("babay {}, manusia gabut".format(fname, notice))
+        afksend.delete()
     except BadRequest:
-        pass
-
+        return
 
 @run_async
 def no_longer_afk(update: Update, context: CallbackContext):
@@ -73,9 +76,13 @@ def no_longer_afk(update: Update, context: CallbackContext):
                 "Dimanakah {}?\nDia disini!",
             ]
             chosen_option = random.choice(options)
-            update.effective_message.reply_text(chosen_option.format(firstname))
+            unafk = update.effective_message.reply_text(chosen_option.format(firstname)
+            )
+            sleep(10)
+            unafk.delete()
         except:
-            return
+            return                                  
+       
 
 
 @run_async
