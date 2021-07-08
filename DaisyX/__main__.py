@@ -63,11 +63,13 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Halo Brow, Gua [Ultraman Bot](https://telegra.ph/file/cc9b45e639efe047ce719.png)
+Halo Brow, Gua [Whuppy Bot](https://telegra.ph/file/eb751912c1cc450c8ea0e.jpg)
 
-Gua Adalah Bot Manage Group Cari Teman Ngobrol! Gua hadir untuk membasmi KEJAHATAN.
+Welkam Cakep
 
-•Baca Info Dibawah! Jangan Malas Membaca•
+Saya adalah Bot Manage Group, Whuppy bot hadir untuk mengelola grup kalian🔥
+
+Jangan lupa baca info di bawah!
 """
 
 buttons = [
@@ -79,19 +81,19 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="SUPPORT GAIS", url="t.me/dreamingmoon"
+            text="SUPPORT GAIS", url="t.me/overthinkingmulu"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="MASUK GAIS", url="t.me/caritemangobrol"
+            text="MASUK GAIS", url="t.me/societygang"
         ),
     ],
 ]
 
 
 HELP_STRINGS = f"""
-*Daftar Command :* [🤖](https://telegra.ph/file/cc9b45e639efe047ce719.png)
+*Daftar Command :* [🤖](https://telegra.ph/file/eb751912c1cc450c8ea0e.jpg)
 ✪ /start: Mulai Aja Ga Usah Malu Malu!
 ✪ /help: Tekan Ini, Jika Mau Tau Tentang Gua!
 ✪ /donate: Donasi Doang.
@@ -227,7 +229,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "Bot King Can Menyala Brow🔥!\n<b>Belum Meninggal Sejak:</b> <code>{}</code>".format(
+            "Bot Queen Lia Menyala Brow🔥!\n<b>Belum Meninggal Sejak:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -365,8 +367,8 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*Hai Manusia ☠️!  Gua {dispatcher.bot.first_name} 😍 \n\nGua dalah Bot Group Management Yang Dimanage oleh [Candra Kurniawan](https://t.me/inicannn) .* "
-            f"\n\n 🔥 Support Nih Brow [DreamingMoon](https://t.me/dreamingmoon) Untuk Support Channel Owner {dispatcher.bot.first_name} 🔥"
+            text=f"*Hai Publik ☠️!  Gua {dispatcher.bot.first_name} 😍 \n\nGua dalah Bot Group Management Yang Dimanage oleh [L I A](https://t.me/whuppy) .* "
+            f"\n\n 🔥 Support Nih Brow [selalu tentangmu](https://t.me/overthinkingmulu) Untuk Support Channel Owner {dispatcher.bot.first_name} 🔥"
             f"\n\n Gua Punya Banyak Fungsi Nih Brow, Cek Sendiri Ajalah Brow!"
             f"\n\nPokoknya Lu Jadiin Gua Admin Ya Brow!"
             f"\n\n**Tekan Tombol Dibawah Untuk Mengetahui Tentang Gua!**",
@@ -403,7 +405,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nTambakan {dispatcher.bot.first_name} Ke Groupmu [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) dan pilih Groupmu. \n"
-            f"\n\nDapatkan info tentang bot {dispatcher.bot.first_name} Dengan Pc Kontak [Candra Kurniawan](https://t.me/inicannn).\n"
+            f"\n\nDapatkan info tentang bot {dispatcher.bot.first_name} Dengan Pc Kontak [L I A](https://t.me/whuppy).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
